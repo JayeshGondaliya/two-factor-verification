@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container">
+    <span class="navbar-brand">2FA Secure System</span>
+    <div>
+  <% if (user) { %>
+  <span class="text-white me-3">Welcome, <%= user.name %>!</span>
+  <a href="/logout" class="btn btn-danger btn-sm">Logout</a>
+<% } else { %>
+  <a href="/login" class="btn btn-outline-light btn-sm">Login</a>
+  <a href="/register" class="btn btn-warning btn-sm">Register</a>
+<% } %>
+
+
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-5 text-center">
+  <h2>Welcome to 2FA Secure System 🔐</h2>
+</div>
+
+</body>
+</html>
